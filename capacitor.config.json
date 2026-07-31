@@ -1,0 +1,6 @@
+{
+  "appId": "com.ather.owlino",
+  "appName": "Owlino",
+  "webDir": "www",
+  "bundledWebRuntime": false
+}
