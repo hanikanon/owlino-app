@@ -39,10 +39,10 @@ jobs:
 
       - name: Show build output (debug)
         run: |
-          echo "--- searching for index.html (depth 5) ---"
-          find . -maxdepth 5 -iname "index.html" -not -path "*/node_modules/*" || true
-          echo "--- .output tree (if exists) ---"
-          find .output -maxdepth 4 2>/dev/null || echo "(no .output dir)"
+          echo "--- searching for index.html (depth 6) ---"
+          find . -maxdepth 6 -iname "*.html" -not -path "*/node_modules/*" || true
+          echo "--- .output full tree (if exists) ---"
+          find .output 2>/dev/null || echo "(no .output dir)"
           echo "--- dist tree (if exists) ---"
           find dist -maxdepth 4 2>/dev/null || echo "(no dist dir)"
 

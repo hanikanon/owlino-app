@@ -17,4 +17,11 @@ export default defineConfig({
       crawlLinks: true,
     },
   },
+  // Override the default "cloudflare" nitro target: that preset builds a
+  // Worker function (SSR-per-request, no static index.html). "static"
+  // forces nitro to emit a fully static site into .output/public, which is
+  // what Capacitor needs to bundle into the native app.
+  nitro: {
+    preset: "static",
+  },
 });
