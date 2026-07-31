@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400" fill="none" stroke="currentColor" stroke-width="1" stroke-opacity="0.05">
+  <g transform="scale(0.8)">
+    <!-- Rocket -->
+    <path d="M40 40 L60 20 C70 10 90 10 90 10 C90 10 90 30 80 40 L60 60 L40 40 Z" />
+    <path d="M40 40 L20 40 L10 50 L30 50 Z" />
+    <path d="M60 60 L60 80 L50 90 L50 70 Z" />
+    <!-- Bitcoin -->
+    <circle cx="150" cy="150" r="20" />
+    <text x="143" y="157" font-family="sans-serif" font-size="20" font-weight="bold">B</text>
+    <!-- Chart -->
+    <path d="M250 50 L250 90 L290 90" />
+    <path d="M260 80 L270 60 L280 70 L300 40" />
+    <!-- Ethereum -->
+    <path d="M50 250 L70 210 L90 250 L70 280 Z" />
+    <!-- Laptop -->
+    <rect x="230" y="230" width="40" height="30" rx="2" />
+    <path d="M220 260 L280 260" />
+    <!-- Owl -->
+    <circle cx="350" cy="200" r="15" />
+    <circle cx="343" cy="197" r="3" fill="currentColor" />
+    <circle cx="357" cy="197" r="3" fill="currentColor" />
+  </g>
+  <g transform="scale(0.8) translate(200, 200)">
+    <!-- Duplicate items to fill the pattern -->
+    <!-- Rocket -->
+    <path d="M40 40 L60 20 C70 10 90 10 90 10 C90 10 90 30 80 40 L60 60 L40 40 Z" />
+    <path d="M40 40 L20 40 L10 50 L30 50 Z" />
+    <path d="M60 60 L60 80 L50 90 L50 70 Z" />
+    <!-- Bitcoin -->
+    <circle cx="150" cy="150" r="20" />
+    <text x="143" y="157" font-family="sans-serif" font-size="20" font-weight="bold">B</text>
+    <!-- Chart -->
+    <path d="M250 50 L250 90 L290 90" />
+    <path d="M260 80 L270 60 L280 70 L300 40" />
+    <!-- Ethereum -->
+    <path d="M50 250 L70 210 L90 250 L70 280 Z" />
+  </g>
+</svg>

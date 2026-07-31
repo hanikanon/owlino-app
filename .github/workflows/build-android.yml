@@ -23,6 +23,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Build web app
+        run: npm run build
+
+      - name: Show build output (debug)
+        run: find . -maxdepth 3 -iname "index.html" -not -path "*/node_modules/*"
+
       - name: Add Android platform (first run only)
         run: test -d android || npx cap add android
 
@@ -39,5 +45,5 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: owlino-debug-apk
+          name: cryptvora-debug-apk
           path: android/app/build/outputs/apk/debug/app-debug.apk

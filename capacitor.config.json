@@ -1,6 +1,6 @@
 {
-  "appId": "com.ather.owlino",
-  "appName": "Owlino",
-  "webDir": "www",
+  "appId": "com.ather.cryptvora",
+  "appName": "Cryptvora",
+  "webDir": ".output/public",
   "bundledWebRuntime": false
 }
