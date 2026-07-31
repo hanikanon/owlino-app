@@ -38,7 +38,13 @@ jobs:
           path: build.log
 
       - name: Show build output (debug)
-        run: find . -maxdepth 3 -iname "index.html" -not -path "*/node_modules/*"
+        run: |
+          echo "--- searching for index.html (depth 5) ---"
+          find . -maxdepth 5 -iname "index.html" -not -path "*/node_modules/*" || true
+          echo "--- .output tree (if exists) ---"
+          find .output -maxdepth 4 2>/dev/null || echo "(no .output dir)"
+          echo "--- dist tree (if exists) ---"
+          find dist -maxdepth 4 2>/dev/null || echo "(no dist dir)"
 
       - name: Add Android platform (first run only)
         run: test -d android || npx cap add android
