@@ -26,8 +26,8 @@ jobs:
       - name: Show environment
         run: node -v && npm -v
 
-      - name: Build web app
-        run: npm run build 2>&1 | tee build.log
+      - name: Build web app (Capacitor CSR build)
+        run: npm run build:capacitor 2>&1 | tee build.log
         continue-on-error: false
 
       - name: Upload build log

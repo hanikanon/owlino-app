@@ -1,6 +1,6 @@
 {
   "appId": "com.ather.cryptvora",
   "appName": "Cryptvora",
-  "webDir": ".output/public",
+  "webDir": "dist-capacitor",
   "bundledWebRuntime": false
 }

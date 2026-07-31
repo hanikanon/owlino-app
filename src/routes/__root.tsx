@@ -67,7 +67,29 @@ function RouteTransition({ children }: { children: ReactNode }) {
 }
 
 
+const IS_CAPACITOR_BUILD = import.meta.env.VITE_CAPACITOR_BUILD === "true";
+
 function RootComponent() {
+  const appBody = (
+    <div id="app-root">
+      <QueryClientProvider client={queryClient}>
+        <SettingsProvider>
+          <ThemedShell>
+            <RouteTransition>
+              <Outlet />
+            </RouteTransition>
+          </ThemedShell>
+        </SettingsProvider>
+      </QueryClientProvider>
+    </div>
+  );
+
+  // Native (Capacitor) build: our own static index.capacitor.html already
+  // provides <html>/<head>/<body>, so just render the app body here.
+  if (IS_CAPACITOR_BUILD) {
+    return <React.Fragment>{appBody}</React.Fragment>;
+  }
+
   return (
     <React.Fragment>
       <html lang="en">
@@ -82,17 +104,7 @@ function RootComponent() {
           <HeadContent />
         </head>
         <body>
-          <div id="root">
-            <QueryClientProvider client={queryClient}>
-              <SettingsProvider>
-                <ThemedShell>
-                  <RouteTransition>
-                    <Outlet />
-                  </RouteTransition>
-                </ThemedShell>
-              </SettingsProvider>
-            </QueryClientProvider>
-          </div>
+          {appBody}
           <ScrollRestoration />
           <Scripts />
         </body>
