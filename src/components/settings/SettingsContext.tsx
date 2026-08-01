@@ -4,6 +4,20 @@ import { CHAT_WALLPAPERS, DEFAULT_CHAT_WALLPAPER_ID, type ChatWallpaperId } from
 
 import { ThemeId, AccentId, BubbleStyle, FontSize, Motion, AppIcon } from "../../config/themes";
 
+// Verification badge catalog — referenced by ProfileHeader and EditProfileScreen.
+// ids match the `availableBadges` default list below.
+export const BADGES = [
+  { id: "none", label: "None", description: "No badge", from: "#94a3b8", to: "#64748b" },
+  { id: "official", label: "Official", description: "Official Cryptvora account", from: "#38bdf8", to: "#0284c7" },
+  { id: "verified", label: "Verified", description: "Verified trader", from: "#22d3ee", to: "#0ea5e9" },
+  { id: "premium", label: "Premium", description: "Premium subscriber", from: "#fbbf24", to: "#d97706" },
+  { id: "creator", label: "Creator", description: "Content creator", from: "#f472b6", to: "#db2777" },
+  { id: "analyst", label: "Analyst", description: "Market analyst", from: "#a78bfa", to: "#7c3aed" },
+  { id: "educator", label: "Educator", description: "Trading educator", from: "#34d399", to: "#059669" },
+  { id: "partner", label: "Partner", description: "Cryptvora partner", from: "#fb923c", to: "#ea580c" },
+  { id: "top-trader", label: "Top Trader", description: "Top-tier trader", from: "#facc15", to: "#ca8a04" },
+] as const;
+
 // Custom hook for local storage
 function useLocalStorage<T>(key: string, initialValue: T) {
   const [storedValue, setStoredValue] = useState<T>(() => {
