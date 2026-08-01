@@ -14,8 +14,5 @@ export default defineConfig({
   build: {
     outDir: "dist-capacitor",
     emptyOutDir: true,
-    rollupOptions: {
-      input: "index.capacitor.html",
-    },
   },
 });
